@@ -7,7 +7,6 @@
 
 namespace Drupal\pathauto\Plugin\pathauto\AliasType;
 
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\pathauto\AliasTypeBatchUpdateInterface;
 
 /**
@@ -20,7 +19,7 @@ use Drupal\pathauto\AliasTypeBatchUpdateInterface;
  *   provider = "node",
  * )
  */
-class NodeAliasType extends EntityAliasTypeBase implements AliasTypeBatchUpdateInterface, ContainerFactoryPluginInterface {
+class NodeAliasType extends EntityAliasTypeBase implements AliasTypeBatchUpdateInterface {
 
   /**
    * {@inheritdoc}

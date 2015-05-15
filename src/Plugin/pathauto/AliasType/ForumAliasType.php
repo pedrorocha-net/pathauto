@@ -7,7 +7,6 @@
 
 namespace Drupal\pathauto\Plugin\pathauto\AliasType;
 
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\pathauto\AliasTypeBatchUpdateInterface;
 
 /**
@@ -20,7 +19,7 @@ use Drupal\pathauto\AliasTypeBatchUpdateInterface;
  *   provider = "forum",
  * )
  */
-class ForumAliasType extends EntityAliasTypeBase implements AliasTypeBatchUpdateInterface, ContainerFactoryPluginInterface {
+class ForumAliasType extends EntityAliasTypeBase implements AliasTypeBatchUpdateInterface {
 
   /**
    * {@inheritdoc}

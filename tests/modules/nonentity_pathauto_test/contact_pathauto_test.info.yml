@@ -1,0 +1,7 @@
+name: Non-Entity Pathauto Test
+type: module
+description: A test module for non-entity pathauto generation
+core: 8.x
+package: Other
+dependencies:
+  - pathauto
