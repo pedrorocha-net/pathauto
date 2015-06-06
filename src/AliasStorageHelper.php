@@ -9,6 +9,7 @@ namespace Drupal\pathauto;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Database\Connection;
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\Core\Path\AliasStorageInterface;
@@ -190,6 +191,10 @@ class AliasStorageHelper implements AliasStorageHelperInterface {
    * {@inheritdoc}
    */
   public function deleteEntityPathAll(EntityInterface $entity, $default_uri = NULL) {
+    // Skip if the entity does not have the path field.
+    if (!($entity instanceof ContentEntityInterface) || !$entity->hasField('path')) {
+      return NULL;
+    }
     $this->deleteAll($entity->urlInfo()->toString());
     if (isset($default_uri) && $entity->urlInfo()->toString() != $default_uri) {
       $this->deleteAll($default_uri);
