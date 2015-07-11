@@ -9,7 +9,7 @@
 language: php
 
 # Comment out this line if you only use unit tests.
-#sudo: required
+sudo: required
 
 php:
   - 5.5
@@ -82,7 +82,7 @@ env:
     #- DRUPAL_TI_RUNNERS="phpunit"
     #- DRUPAL_TI_RUNNERS="simpletest"
     #- DRUPAL_TI_RUNNERS="behat"
-    - DRUPAL_TI_RUNNERS="phpunit"
+    - DRUPAL_TI_RUNNERS=" simpletest"
 
 mysql:
   database: drupal_travis_db
