@@ -61,6 +61,7 @@ before_script:
   - cd $TRAVIS_BUILD_DIR/../drupal
   # Update drupal core
   - git pull origin 8.0.x
+  - curl https://gist.githubusercontent.com/Berdir/aa7b43bf32d690e793a1/raw/e27e415251517948722e45f2eb552b306a9719d4/gistfile1.txt | git apply
   # Install the site
   - drush -v site-install minimal --db-url=mysql://root:@localhost/drupal --yes
   - drush en --yes simpletest
