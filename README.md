@@ -70,6 +70,12 @@ When the pattern for a content type is left blank, the default pattern will be
 used. But if the default pattern is also blank, Pathauto will be disabled
 for that content type.
 
+##Overriding path on particular items
+When in need to override the pattern defined to the content(Node, Taxonomy, 
+User, etc), to create a path manually and ignore the pattern, you need to 
+first go to the "Manage Form Display" page of your content and change the
+widget used to the "URL alias" field from "URL alias" to "Pathauto"
+
 ##Credits:
 
 The original module combined the functionality of Mike Ryan's autopath with
